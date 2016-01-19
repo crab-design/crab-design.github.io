@@ -1,0 +1,53 @@
+body {
+  font-family: sans-serif;
+  font-size: 1.4em;
+  color: #261700;
+  background-color: #fff5f5;
+}
+
+a{color: #cd5b5e;}
+a:hover { color: #ff0e57; }
+
+article {
+    margin-bottom: 4rem;
+    padding-left: 2rem;
+    text-align: center
+}
+
+.hat_title {
+  border-bottom: 5px dotted #261700;
+  display: inline-block;
+}
+
+.hat_menu li{
+  display: inline-block;
+  padding:0;
+  margin: 0;
+}
+
+header {
+  padding-top: 200px;
+  text-align: center
+}
+
+header h1 {
+  font-family: 'Righteous', cursive;
+  margin: 0;
+  text-align: center
+}
+
+li {
+  margin-left: 1.5rem;
+}
+
+.logo {
+  width: 50px;
+  fill: #261700;
+  display: inline-block;
+
+}
+
+footer {
+  padding-top: 1rem;
+  border-top: 2px solid #261700;
+}
