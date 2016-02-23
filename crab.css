@@ -4,11 +4,11 @@ body {
   background-color: #fff5f5;
 }
 
-a{color: #cd5b5e;}
+a:link{color: #cd5b5e;}
 a:hover { color: #ff0e57; }
 
 p {
-line-height: 1.25em;
+
 margin: 1.25em 0;
 text-align: justify;
 }
@@ -22,10 +22,12 @@ header h1 {
   font-family: 'Righteous', cursive;
   font-size: 3em;
 }
+.title:link {color:#cd5b5e;}
+.title:hover {color:#cd5b5e;}
 
 img {
   margin: auto;
   display: block;
   position:relative;
-  width: 80%;
+  width: 100%;
 }
