@@ -349,7 +349,48 @@
         <p>Next you need to configure the Raspberry Pi image for VGA see the instructions for that.</p>
 
         <h2 id="installation">Installation Instructions</h2>
-        <p>Coming Soon</p>
+        <h4>Easy Way</h4>
+        <p>Download the 2 files found <a href="https://github.com/crab-design/analogue_cap/tree/master/setup" target="_blank">here</a></p>
+        <p>Insert the Raspberry Pi SD card into your PC and copy 'config.txt' to boot and 'crab-vga-overlay.dtb' to boot/overlays</p>
+        <p>Unmount and put in Raspberry Pi, it should boot to XVGA resolution</p>
+        <h4>Better Way</h4>
+        <p>Only better because if you have settings in your config.txt file they do not get overwritten. Also you can select what options you want and which you don't</p>
+        <p>Download 'crab-vga-overlay.dtb' found <a href="https://github.com/crab-design/analogue_cap/tree/master/setup" target="_blank">here</a></p>
+        <p>Either copy 'crab-vga-overlay.dtb' onto the SD card under /boot/overlays through your PC or use wget to download it from the Pi <a href="https://github.com/crab-design/analogue_cap/raw/master/setup/crab-vga-overlay.dtb">(use this link)</a></p>
+        <p>Edit config.txt and add the following lines. Note that each section is optional they do not have to all be on at the same time.</p>
+        <p>
+        <b>VGA</b><br />
+        # Enable pins to be DPI output<br />
+        <em>dtoverlay=crab-vga</em><br />
+        <em>enable_dpi_lcd=1</em><br />
+        # pin arrangement that works with this cap<br />
+        <em>dpi_output_format=6</em><br />
+        # Make this display default output (if not set HDMI will show shell and VGA screen will be blank but work)<br />
+        <em>display_default_lcd=1</em><br />
+        # Set resolution of VGA (numbers the the same as HDMI)<br />
+        <em>dpi_group=2</em><br />
+        <em>dpi_mode=16</em><br />
+        </p>
+
+        <p>
+        <b>Audio</b><br />
+        # Enable audio<br />
+        <em>dtoverlay=pwm-2chan</em>
+        </p>
+
+        <p>
+        <b>Composite</b><br />
+        # Settings SDTV (composite) this is set to PAL btw see <a href="https://www.raspberrypi.org/documentation/configuration/config-txt.md">here</a> for settings<br />
+        <em>sdtv_mode=2</em><br />
+        <em>sdtv_aspect=2</em><br />
+
+        # Overscan settings</em><br />
+        <em>overscan_left=16</em><br />
+        <em>overscan_right=16</em><br />
+        <em>overscan_top=16</em><br />
+        <em>overscan_bottom=16</em><br />
+        </p>
+
         <h2 id="troubleshooting">Troubleshooting</h2>
         <p>Coming Soon</p>
 
